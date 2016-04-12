@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const jwtConfig = require("../config/jwtConfig").jwtConfig;
+var jwtConfig = require("../config/jwtconfig").jwtConfig;
 var jwt = require("jwt-simple");
 
 var mongoose = require('mongoose');

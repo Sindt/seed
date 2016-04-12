@@ -1,5 +1,5 @@
 {
-  "name": "mean4",
+  "name": "seed",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,5 +20,12 @@
     "passport": "^0.3.2",
     "passport-jwt": "^2.0.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://570d09a30c1e66f69600001b@seed-sindt.rhcloud.com/~/git/seed.git/"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
