@@ -1,0 +1,35 @@
+<div class="page-header">
+    <h2>Users</h2>
+</div>
+<div class="row content">
+    <div class="col-sm-2 sidenav">
+        <div class="list-group">
+            <a class="list-group-item" href="#/"><i class="fa fa-home fa-fw"></i> Home</a>
+            <a class="list-group-item" href="#/"><i class="fa fa-book fa-fw"></i> Library</a>
+            <a class="list-group-item" href="#/"><i class="fa fa-pencil fa-fw"></i> Applications</a>
+            <a class="list-group-item" href="#/"><i class="fa fa-cog fa-fw"></i> Settings</a>
+        </div>
+    </div>
+    <div style="overflow-x:auto;">
+        <div class="col-sm-8">
+            <table class="table table-sm">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Created</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in users">
+                    <th scope="row">{{user._id}}</th>
+                    <td>{{user.userName}}</td>
+                    <td>{{user.created | date:'medium'}}</td>
+                    <td><i class="fa fa-times fa-lg"></i></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
