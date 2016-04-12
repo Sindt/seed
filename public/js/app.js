@@ -1,1 +1,1 @@
-angular.module('myApp', ['ngRoute', 'Routes', 'MainCtrl', 'Factory', 'AuthCtrl']);
+angular.module('myApp', ['ngRoute', 'Routes', 'MainCtrl', 'Factory', 'AuthCtrl', 'angular-jwt']);
