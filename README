@@ -1,0 +1,69 @@
+Demonstrate, with focus on security, a proposal for an Express/Mongo+Angular-seed with built in support
+for most of the basic security problems, SSL and ready to deploy on your favourite Cloud Hosting Service:
+
+Back-end: app folder.
+
+Front-end: public folder.
+
+
+Explain basic security terms like authentication, authorization, confidentiality, integrity, SSL/TLS and
+provide examples of how you have used them:
+
+Authentication:
+Confirming the identity of a client (via some kind of login procedure)
+Authorization:
+Determing whether an authenticated client is allowed to receive a service or perform an operation
+Confidentiality:
+Protection from disclosure to unauthorised persons
+Integrity:
+Maintaining data consistency (data cannot be modified)
+
+
+Explain basic security threads like:
+Cross Site Scripting (XSS):
+Cross-site Scripting (XSS) refers to client-side code injection attack wherein an attacker can execute malicious scripts.
+
+SQL Injection:
+SQL injection is a technique where malicious users can inject SQL commands into an SQL statement, via web page input.
+Injected SQL commands can alter SQL statement and compromise the security of a web application.
+
+
+Explain, at a fundamental level, the technologies involved, and the steps required initialize a SSL connection
+between a browser and a server and how to use SSL in a secure way:
+
+HTTPS is nothing more than the HTTP protocol on top of SSL/TLS. HTTPS encrypts standard HTTP Web traffic
+using the Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols.
+This means that machines between the server and client can't see any of the data that is sent back and forth.
+
+Explain and demonstrate ways to protect user passwords on our backends, and why this is necessary:
+
+See model.js
+bcrypt hashing the password and store the hash in mongodb.
+comparePassword method compare the hash values.
+
+Explain about password hashing, salts and the difference between bcrypt and older (not recommended)
+algorithms like sha1, md5 etc:
+
+Bcrypt is slow hashing, compared to the older methods like sha1 and md5.
+It takes more time to hash the value, it then also takes a much longer time to brute-force the password.
+
+
+Explain about JSON Web Tokens (jwt) and why they are very suited for a REST-based API:
+
+JWTs are self-contained: They will carry all the information necessary within itself.
+This means that a JWT will be able to transmit basic information about itself, a payload and a signature.
+Since JWTs are self-contained, they are perfectly used inside an HTTP header when authenticating an API.
+
+The idea behind “Tokens Approach” is to generate a signed token with some information and send it with every API call.
+Then in server side the token is verified and if it is correct,
+we can get some parameters from token and use them in authorization mechanism.
+
+
+Explain and demonstrate a system using jwt's, focusing on both client and server side:
+
+Client side: public\js\controllers\auth.js
+
+Server side: app\config
+
+Explain and demonstrate use of the npm passportjs module:
+https://github.com/Sindt/Passportjs-facebook.git
